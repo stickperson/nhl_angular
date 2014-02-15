@@ -6,17 +6,19 @@ describe('Controller: MainCtrl', function () {
   beforeEach(module('nhlApp'));
 
   var MainCtrl,
+    allTeams,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
+    // Create new scope which is a child of the root scope
     scope = $rootScope.$new();
     MainCtrl = $controller('MainCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should be 2 actions', function () {
+    expect(scope.actions.length).toBe(3);
   });
 });

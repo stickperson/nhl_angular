@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: phone', function () {
+xdescribe('Directive: phone', function () {
 
   // load the directive's module
   beforeEach(module('nhlApp'));

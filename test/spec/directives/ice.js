@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Directive: ice', function () {
+xdescribe('Directive: ice', function () {
 
   // load the directive's module
   beforeEach(module('nhlApp'));

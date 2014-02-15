@@ -1,9 +1,9 @@
 'use strict';
 
-xdescribe('Directive: d3test', function () {
+describe('Directive: stats', function () {
 
   // load the directive's module
-  beforeEach(module('nhlApp'));
+  beforeEach(module('appApp'));
 
   var element,
     scope;
@@ -13,8 +13,8 @@ xdescribe('Directive: d3test', function () {
   }));
 
   it('should make hidden element visible', inject(function ($compile) {
-    element = angular.element('<d3test></d3test>');
+    element = angular.element('<stats></stats>');
     element = $compile(element)(scope);
-    expect(element.text()).toBe('this is the d3test directive');
+    expect(element.text()).toBe('this is the stats directive');
   }));
 });

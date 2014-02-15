@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Service: currentTeam', function () {
+xdescribe('Service: currentTeam', function () {
 
   // load the service's module
   beforeEach(module('nhlApp'));
