@@ -1,4 +1,7 @@
-<links teams="allTeams | orderBy:location" select="actions.getTeam(team)"></links>
+<links teams="allTeams | orderBy:location" select="actions.getTeam(team)" team="currentTeam"></links>
+
+<div current-heading id="current-team" team="currentTeam"></div>
+<div stats id="stats" team="currentTeam" averages="leagueStats"></div>
 
 <ice team="currentTeam"></ice>
 
