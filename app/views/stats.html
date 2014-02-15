@@ -1,0 +1,28 @@
+<div id="current-comparison">
+  <table cellspacing=5>
+    <tr>
+      <th></th>
+      <th>LW</th>
+      <th>C</th>
+      <th>RW</th>
+      <th>D</th>
+      <th>G</th>
+    </tr>
+    <tr>
+      <td>{{ team.full_name }}: </td>
+      <td>${{ (team.lw_cap / 1000000) | number:3 }}M
+      <td>${{ (team.center_cap / 1000000) | number:3}}M
+      <td>${{ (team.rw_cap / 1000000) | number:3 }}M
+      <td>${{ (team.d_cap / 1000000) | number:3}}M
+      <td>${{ (team.g_cap / 1000000) | number:3}}M
+    </tr>
+    <tr>
+      <td>League Avg: </td>
+      <td>${{ averages.lw }}M
+      <td>${{ averages.c }}M
+      <td>${{ averages.rw }}M
+      <td>${{ averages.d }}M
+      <td>${{ averages.g }}M
+    </tr>
+  </table>
+</div>
