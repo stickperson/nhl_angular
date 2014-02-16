@@ -13,7 +13,7 @@ angular.module('nhlApp')
                   '<div id="{{ team.name }}" ng-repeat="team in teams | orderBy: ' + "'location'" + '" ng-click="select({team:team.name})">' +
                     '<img src="images/{{ team.name }}.gif">' +
                     '<br>' +
-                    '${{ (team.cap_total / 1000000) | number:1 }}M'+
+                    '${{ (team.cap_total / 1000000) | number:1 }}M' +
                   '</div>' +
                 '</div>',
       link: function(scope, element) {

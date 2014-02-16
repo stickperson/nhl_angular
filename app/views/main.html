@@ -1,5 +1,5 @@
 <links teams="allTeams | orderBy:location" select="actions.getTeam(team)" team="currentTeam"></links>
-
+<div id="selected-position"></div>
 <div current-heading id="current-team" team="currentTeam"></div>
 <div stats id="stats" team="currentTeam" averages="leagueStats"></div>
 
@@ -15,3 +15,23 @@
     Built using <a href="http://d3js.org" target="_blank">d3.js</a>
   </p>
 </div>
+
+<script type="text/underscore" id="popupTemplate">
+  <h2><img src="images/<%= data.logo %>.gif">  <%= data.location %> <%= data.team %></h2>
+  <br clear="left">
+  <table cellspacing=0>
+    <tr class="position-summary">
+      <td><h3 style="font-weight: bold"><%= data.position %></h3></td>
+      <td class="salary">$<%= data.cap %></td>
+    </tr>
+    <tr class="padding"><td></td></tr>
+  <% _.each(data.players, function(player) { %>
+    <tr>
+      <td class="player-name">
+        <%= player.full_name %>
+      </td>
+      <td class="salary">$<%= player.small_cap %></td>
+    </tr>
+  <% }) %>
+  </table>
+</script>
